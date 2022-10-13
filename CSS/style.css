@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --color-white:#FFFFFF;
+    --color-theme:#FF7373;
+    --color-dark:#222529;
+    --color-shadow:rgba(0, 0, 0, 0.06);
+    --linear-gradient-dark:#E6E6E6;
+    --linear-gradient-light:#F5F5F5;
+
+    --max-width: 1680px;
+}
+html, body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+.border{
+    border: 1px solid red !important;
+}
+
+a {
+    color: var(--color-theme);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color-theme);
+    text-decoration: underline;
+}
+
+.__gradinent-gray{
+  background: var(--linear-gradient-dark);
+  background: linear-gradient(90deg, var(--linear-gradient-light) 0%, var(--linear-gradient-dark)100%);
+
+}
+.__logo {
+    font-size: 35px;
+    font-weight: 700;
+}
+.bg-theme{
+    background-color: var(--color-theme);
+}
+
+
+.__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.__navbar .__nav-links{
+  font-weight: 500;
+}
+      .__navbar .__nav-links a{
+    color: var(--color-dark);
+    font-weight: 500;
+    text-decoration: none; /*så jag inte har undertext*/
+    margin-left: 15px;
+    margin-right: 15px;
+     }
+           .__navbar .__nav-links a:hover{
+            color: var(--color-theme);
+            text-decoration: none;  
+                   }
+            .__navbar .__nav-links a:active,
+            .__navbar .__nav-links .__active{ 
+                color: var(--color-theme);
+                text-decoration: none;
+               }
+    .__nav-icon-links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .__navbar .__nav-icon-links a{
+            background-color: var(--color-white);
+            color: var(--color-dark);
+            width: 36px;
+            height: 36px;
+            margin-left: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 6px 4px var(--color-shadow);
+            position: relative;
+            }
+            .__navbar .__nav-icon-links a:hover{
+                color: var(--color-theme);
+                text-decoration: none;
+            }
+
+.__showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+   
+   
+}
+.__showcase .__img-left{
+    margin-left: -120px;
+}
+.__showcase .__img-right{
+    margin-right: -120px;
+}
+.__showcase .__showcase-body{
+    text-align: center;  
+}
+
+.__showcase .__showcase-body h1{
+    font-size: 65px;
+    font-weight: 800;
+}
+
+
+
+/* funkar för skärmar över 1400*/
+@media (min-width:1600px) {
+    .container {
+        max-width: var(--max-width);
+    }
+}
+
+
+
+   
+/*
+
+.btn-theme {
+    background-color:var(--color-theme);
+    color:var(--color-white);
+    border-radius: none;
+    font-weight:var(--font-weight-semibold);
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+}
+.btn-theme:hover{
+    background-color: var(--color-theme-dark);
+    color: var(--color-white);
+}
+
+.btn-black {
+    background-color:var(--color-dark);
+    color: var(--color-white);
+    border-radius: none;
+    font-weight: var(--font-weight-semibold);
+    padding-left: 1.75rem;
+    padding-left: 1.75rem;
+}
+.btn-black:hover {
+background-color: var(--color-theme-light);
+color:var(--color-theme-dark);
+}
+
+.text-theme{
+    color:var(--color-theme-dark);
+}
+.bg-theme{
+    background-color: var(--color-theme-dark);
+}
+
+top-menu
+.top-menu {
+    background-color:var(--color-gray-1) ; 
+    height: 5rem;
+   
+    }
+.top-menu > .container {
+    display:flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding:0;
+   }
+   .top-menu #brand a{
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    margin-left: 3rem;
+   }
+
+
+  .top-menu #site-settings{
+     display:flex;
+     align-content: center;
+     justify-content: space-between;
+    }
+    #site-settings a {
+         color: var(--color-theme-dark);
+         text-decoration: var(--color-white);
+         padding: 1rem;
+         font-weight: var(--font-weight-semibold);
+         font-size: var(--font-size-13);
+    }
+    #site-settings a:hover{
+        color:var(--color-theme);
+    }
+
+      .top-menu #menu-links {
+     display: flex;
+     align-items: right;
+     margin-right: 3rem;
+    
+      }
+
+      #menu-links a{
+       border-radius: 50%;
+       padding: 0.5rem;
+       color: var(--color-theme-dark);
+       background-color: white;
+       margin: 0.5rem;   
+    }
+      
+Main-menu
+
+.main-menu {
+    background-color: var(--color-gray-1); 
+    justify-content: space-between;  
+}
+.main-menu .container{
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  padding:0;
+  margin:0;
+  
+}
+.main-menu .women{
+    margin-right: 1rem;
+   
+
+}
+.main-menu .sale{
+    display: grid;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-right: 30rem;
+
+ 
+ 
+ 
+ 
+   
+}
+.main-menu .couple{
+    display:grid;
+  
+  
+  
+}/*
